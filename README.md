@@ -2,7 +2,7 @@
 操作系统课程设计，基于vue+socket.io的即时通讯应用
 ## 介绍
 **技术栈**
-- 前端：Vue.js + antd vue
+- 前端：Vue.js + Ant Design Vue
 - 后端：Node.js + express + socket.io
 - Mysql数据库
 ## 使用
