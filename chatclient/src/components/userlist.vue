@@ -42,6 +42,7 @@
   </div>
 </template>
 <script>
+import socket from "@/assets/js/socket.js";
 export default {
   props: {
     unreadList: Array,
@@ -52,10 +53,31 @@ export default {
     };
   },
   mounted() {
-    let userId = window.localStorage.getItem("currentUserId");
-    const values = { id: userId };
-    //又用到了setTimeout，需深入研究
-    setTimeout(() => {
+    this.getUserlist();
+    let that=this
+
+    //监听好友上线
+    socket.on("otherLogin", (data) => {
+      this.$message.info(data.username + "上线了");
+      that.getUserlist()
+    });
+
+    //监听好友退出登录
+    socket.on("otherLogout", (data) => {
+      this.$message.info(data.username + "下线了");
+      that.getUserlist()
+    });
+
+    //监听好友断开连接
+    socket.on("otherDisconnect", () => {
+      that.getUserlist()
+    });
+  },
+  methods: {
+    //获取用户列表
+    getUserlist() {
+      let userId = window.localStorage.getItem("currentUserId");
+      const values = { id: userId };
       this.$axios.post("/chat/getAllUser", values).then((res) => {
         if (res.data.code === 200) {
           let userList = res.data.data;
@@ -70,9 +92,7 @@ export default {
           this.$message.error("查询失败");
         }
       });
-    }, 150);
-  },
-  methods: {
+    },
     //选择聊天用户
     chooseChat(item) {
       //添加选中类
@@ -90,8 +110,8 @@ export default {
           if (user.username == item.username) {
             user.num = 0;
           }
-          let index=this.unreadList.indexOf(item.username)
-          this.unreadList.splice(index,1)
+          let index = this.unreadList.indexOf(item.username);
+          this.unreadList.splice(index, 1);
         });
       }
     },

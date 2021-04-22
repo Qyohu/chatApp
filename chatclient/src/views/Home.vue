@@ -75,9 +75,7 @@ export default {
           console.log("与服务器连接成功");
         });
         socket.emit("login", this.currentUser);
-        socket.on("otherLogin", (data) => {
-          this.$message.info(data.username+"上线了");
-        });
+        
         // 获取未读消息
         socket.on("unreadMsg", (data) => {
           data.forEach((item) => {

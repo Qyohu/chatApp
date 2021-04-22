@@ -33,10 +33,10 @@ function getSocket(server) {
             //修改数据库登录信息(socketid,isonline
             let sql = `update user set socketid='${socket.id}',isonline='true' where id = ${data.id}`;
             conn.query(sql)
-            
+            // 加入home房间
+            socket.join('home')
             //向其他用户发送上线通知
-            socket.emit('otherLogin', data)
-
+            socket.broadcast.to('home').emit("otherLogin",data);
             //获取所有加入的群
             let groupSql = `select * from user where isgroup='true'`
             conn.query(groupSql, (err, result) => {
@@ -54,12 +54,19 @@ function getSocket(server) {
         })
         //登出
         socket.on('disconnect', function () {
+            //退出房间
+
+            socket.broadcast.to('home').emit("otherDisconnect");
+            socket.leave('home')
             let sql = `update user set socketid=null,isonline=null where socketid = '${socket.id}'`;
             conn.query(sql)
         });
         //登出
         socket.on('loginOut', function (data) {
-            //修改数据库登录信息(socketid,isonline
+            //退出房间
+            socket.broadcast.to('home').emit("otherLogout",data);
+            socket.leave('home')
+            //修改数据库登录信息(socketid,isonline)
             let sql = `update user set socketid=null,isonline=null where socketid = '${socket.id}'`;
             conn.query(sql)
         })
