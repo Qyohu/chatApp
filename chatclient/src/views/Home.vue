@@ -108,9 +108,14 @@ export default {
         socket.on("accept", (msg) => {
           console.log(msg);
           //如果在线且正在联系，则直接发送新消息
+          console.log(this.isChat == true &&
+              msg.from.username == this.contectUser.username);
+          console.log(this.isChat == true &&
+              msg.to.username == this.contectUser.username &&
+              msg.to.isgroup == "true");
           if (
             (this.isChat == true &&
-              msg.from.username == this.contectUser.username) ||
+              msg.from.username == this.contectUser.username && msg.to.isgroup == "false") ||
             (this.isChat == true &&
               msg.to.username == this.contectUser.username &&
               msg.to.isgroup == "true")

@@ -11,7 +11,7 @@ import axios from 'axios'
 import socket from 'socket.io-client'
 
 
-axios.defaults.baseURL = 'http://localhost:3000'
+axios.defaults.baseURL = 'http://121.43.132.101:3000'
 Vue.prototype.$axios = axios
 Vue.prototype.$io = socket
 Vue.prototype.$confirm = Modal.confirm
