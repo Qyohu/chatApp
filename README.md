@@ -52,4 +52,6 @@ npm run build
 
 ### 移动端
 
-![image](https://user-images.githubusercontent.com/48149455/116059596-94c18780-a6b3-11eb-932b-3cd839231143.png)![image](https://user-images.githubusercontent.com/48149455/116058970-f503f980-a6b2-11eb-9cbe-f90ca6ab3f93.png)
+![image](https://user-images.githubusercontent.com/48149455/116059596-94c18780-a6b3-11eb-932b-3cd839231143.png)
+
+![image](https://user-images.githubusercontent.com/48149455/116058970-f503f980-a6b2-11eb-9cbe-f90ca6ab3f93.png)
