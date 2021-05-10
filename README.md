@@ -8,7 +8,8 @@
 ## 使用
 **请先下载Node.js**
 
-在本地Mysql导入Sql文件(暂未上传)
+在本地Mysql导入Sql文件 
+```chatapp/www/chatapp.sql```
 
 运行服务端:
 ```
@@ -38,6 +39,7 @@ npm run serve
 # 打包
 npm run build
 ```
+<<<<<<< HEAD
 
 ## 主要界面
 PC端
@@ -52,3 +54,21 @@ PC端
 
 
 
+=======
+## 界面
+### 登录注册
+
+![image](https://user-images.githubusercontent.com/48149455/116059407-617ef880-a6b3-11eb-9db3-afd46d8bb447.png)
+
+
+### PC端
+
+![image](https://user-images.githubusercontent.com/48149455/116058879-dc93df00-a6b2-11eb-90d6-57cbe7df5906.png)
+
+
+### 移动端
+
+![image](https://user-images.githubusercontent.com/48149455/116059596-94c18780-a6b3-11eb-932b-3cd839231143.png)
+
+![image](https://user-images.githubusercontent.com/48149455/116058970-f503f980-a6b2-11eb-9cbe-f90ca6ab3f93.png)
+>>>>>>> ec8346867d5633b94c28b63f3e2b5892d682c3be
