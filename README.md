@@ -1,5 +1,5 @@
 # chatApp
-操作系统课程设计，基于vue+socket.io的即时通讯应用
+操作系统课程设计，基于vue+socket.io的即时通讯应用。应用支持响应式，目前实现了注册登录、一对一聊天、在线群聊功能
 ## 介绍
 **技术栈**
 - 前端：Vue.js + Ant Design Vue
@@ -38,3 +38,17 @@ npm run serve
 # 打包
 npm run build
 ```
+
+## 主要界面
+PC端
+
+![image-20210426170317493](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426170317493.png)
+
+移动端
+
+![image-20210426171154906](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426171154906.png)
+
+![image-20210426171212605](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426171212605.png)
+
+
+
