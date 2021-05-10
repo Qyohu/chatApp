@@ -39,22 +39,7 @@ npm run serve
 # 打包
 npm run build
 ```
-<<<<<<< HEAD
 
-## 主要界面
-PC端
-
-![image-20210426170317493](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426170317493.png)
-
-移动端
-
-![image-20210426171154906](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426171154906.png)
-
-![image-20210426171212605](C:\Users\76305\AppData\Roaming\Typora\typora-user-images\image-20210426171212605.png)
-
-
-
-=======
 ## 界面
 ### 登录注册
 
@@ -71,4 +56,3 @@ PC端
 ![image](https://user-images.githubusercontent.com/48149455/116059596-94c18780-a6b3-11eb-932b-3cd839231143.png)
 
 ![image](https://user-images.githubusercontent.com/48149455/116058970-f503f980-a6b2-11eb-9cbe-f90ca6ab3f93.png)
->>>>>>> ec8346867d5633b94c28b63f3e2b5892d682c3be
